@@ -24,3 +24,7 @@ export const getNavigationDepth = (path: string): number => {
 export const isExternalLink = (href: string): boolean => {
   return /^https?:\/\//.test(href);
 };
+
+export const formatRoute = (route: string): string => {
+  return route.replace(/([A-Z])/g, ' $1').trim();
+};
