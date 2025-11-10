@@ -1,0 +1,19 @@
+{
+  "title": "NamelessUI",
+  "root": true,
+  "pages": [
+    "---Getting started---",
+    "index",
+    "installation",
+    "---Components---",
+    "tilt-effect",
+    "writing-text",
+    "spring-element",
+    "sticker-peel",
+    "dark-veil",
+    "scrambled-text",
+    "text-pressure",
+    "splash-cursor",
+    "gooey-text-morphing"
+  ]
+}

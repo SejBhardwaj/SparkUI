@@ -1,0 +1,85 @@
+import { Play, User } from "lucide-react";
+
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { AvatarStack } from "@/registry/pro-marketing/ui/avatar-stack";
+import {
+  PageHeading,
+  PageHeadingActions,
+  PageHeadingBody,
+  PageHeadingTagline,
+  PageHeadingTitle,
+} from "@/registry/pro-marketing/ui/page-heading";
+
+export function PageHeadingDemo() {
+  return (
+    <div className="flex flex-col p-5 lg:p-8">
+      {/* Section holding the Page Heading */}
+      <PageHeading alignment="center">
+        <PageHeadingTagline>New features released</PageHeadingTagline>
+        <PageHeadingTitle>Make Better Decisions, With Ease</PageHeadingTitle>
+        <PageHeadingBody>
+          Acme Inc&apos;s personal AI helps you cut through the noise, speed up delivery, and stay
+          focused without switching contexts.
+        </PageHeadingBody>
+        <PageHeadingActions>
+          <Button>Get Started</Button>
+          <Button variant="outline">
+            <Play /> Watch Demo
+          </Button>
+        </PageHeadingActions>
+
+        {/* Extra content - can be anything you want */}
+        <div className="flex flex-col items-center gap-2 pt-5 lg:pt-9">
+          <AvatarStack>
+            {avatars.map((avatar) => (
+              <Avatar key={avatar}>
+                <AvatarImage src={avatar} />
+                <AvatarFallback>
+                  <User />
+                </AvatarFallback>
+              </Avatar>
+            ))}
+          </AvatarStack>
+          <span className="text-xs text-muted-foreground">Loved by 4200+ professionals</span>
+        </div>
+      </PageHeading>
+
+      <PageHeading>
+        <PageHeadingTagline>New features released</PageHeadingTagline>
+        <PageHeadingTitle>Make Better Decisions, With Ease</PageHeadingTitle>
+        <PageHeadingBody>
+          Acme Inc&apos;s personal AI helps you cut through the noise, speed up delivery, and stay
+          focused without switching contexts.
+        </PageHeadingBody>
+        <PageHeadingActions>
+          <Button>Get Started</Button>
+          <Button variant="outline">
+            <Play /> Watch Demo
+          </Button>
+        </PageHeadingActions>
+
+        {/* Extra content - can be anything you want */}
+        <div className="flex flex-col gap-2 pt-5 lg:pt-9">
+          <AvatarStack>
+            {avatars.map((avatar) => (
+              <Avatar key={avatar}>
+                <AvatarImage src={avatar} />
+              </Avatar>
+            ))}
+          </AvatarStack>
+          <span className="text-xs text-muted-foreground">Loved by 4200+ professionals</span>
+        </div>
+      </PageHeading>
+    </div>
+  );
+}
+
+const avatars = [
+  "https://free.shadcraft.com/assets/avatars/person-3.webp",
+  "https://free.shadcraft.com/assets/avatars/person-1.webp",
+  "https://free.shadcraft.com/assets/avatars/person-6.webp",
+  "https://free.shadcraft.com/assets/avatars/person-5.webp",
+  "https://free.shadcraft.com/assets/avatars/person-4.webp",
+  "https://free.shadcraft.com/assets/avatars/person-2.webp",
+];

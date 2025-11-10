@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    div:hover::-webkit-scrollbar{
+        width: .25rem;
+    }
+
+    .blocksnav-scrollbar::-webkit-scrollbar{
+        height: .25rem;
+    }
+
+    .blocksnav-scrollbar::-webkit-scrollbar {
+        width: 0;
+        height: .25rem;
+    }
+
+    .blocksnav-scrollbar::-webkit-scrollbar-track {
+        background: theme('colors.transparent');
+        border-radius: 99999px;
+    }
+
+    .blocksnav-scrollbar:hover{
+        &::-webkit-scrollbar-thumb {
+            @apply bg-gray-400 dark:bg-gray-600 rounded-full
+        }
+    }
+
+    .custom-scrollbar{
+        &::-webkit-scrollbar {
+            width: 0;
+            height: .25rem;
+            opacity:0;
+            transition: width 0.25s;
+        }
+
+        &::-webkit-scrollbar-track:hover {
+            background: theme('colors.transparent');
+            border-radius: 99999px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: theme('colors.gray.300');
+            border-radius: 99999px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.gray.400');
+        }
+    }
+
+    .dark .custom-scrollbar, .blocks-scrollbar{
+        &::-webkit-scrollbar-track:hover {
+            background: theme('colors.gray.800');
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: theme('colors.gray.600');
+            border-radius: 99999px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: theme('colors.gray.500');
+        }
+    }
+}

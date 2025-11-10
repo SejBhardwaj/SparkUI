@@ -1,0 +1,12 @@
+{
+  "title": "Docs",
+  "pages": [
+    "introduction",
+    "installation",
+    "mcp",
+    "icona",
+    "other-animated-registry",
+    "troubleshooting",
+    "components"
+  ]
+}

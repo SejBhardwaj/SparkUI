@@ -1,0 +1,93 @@
+import "@/styles/globals.css";
+
+import type { Metadata } from "next";
+
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { ScreenSizeIndicator } from "@/components/screen-size-indicator";
+import { ShadcraftBanner } from "@/components/shadcraft-banner";
+import { ThemeProvider } from "@/components/theme-provider";
+import { SITE_CONFIG } from "@/config/site";
+import { fontVariables } from "@/lib/fonts";
+
+export const metadata: Metadata = {
+  title: {
+    default: SITE_CONFIG.title,
+    template: `%s | ${SITE_CONFIG.title}`,
+  },
+  metadataBase: new URL(SITE_CONFIG.url),
+  description: SITE_CONFIG.description,
+  keywords: SITE_CONFIG.keywords,
+  authors: [{ name: SITE_CONFIG.creator.general, url: "https://shadcraft.com" }],
+  creator: SITE_CONFIG.creator.general,
+  alternates: {
+    canonical: SITE_CONFIG.url,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: process.env.NEXT_PUBLIC_APP_BASE_URL,
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+    siteName: SITE_CONFIG.name,
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_APP_BASE_URL}/opengraph-image.png`,
+        width: 1200,
+        height: 630,
+        alt: SITE_CONFIG.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    images: [`${process.env.NEXT_PUBLIC_APP_BASE_URL}/opengraph-image.png`],
+    creator: SITE_CONFIG.creator.twitter,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_CONFIG.name,
+  url: SITE_CONFIG.url,
+  description: SITE_CONFIG.description,
+  publisher: {
+    "@type": "Organization",
+    name: "Shadcraft",
+    url: "https://shadcraft.com",
+  },
+};
+
+export default function RootLayoutApp({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script async crossOrigin="anonymous" src="https://tweakcn.com/live-preview.min.js" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      </head>
+      <body className={`${fontVariables} overscroll-none`}>
+        <ThemeProvider>
+          <div className="isolate flex size-full min-h-svh flex-col [--header-height:calc(--spacing(16))]">
+            <ShadcraftBanner />
+
+            <Header />
+            <div className="relative isolate w-full flex-1">
+              <div className="container mx-auto">{children}</div>
+            </div>
+            <Footer />
+          </div>
+
+          <ScreenSizeIndicator showTooltip className="fixed right-2 bottom-2" />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}

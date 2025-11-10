@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+
+@font-face {
+  font-family: joyride;
+  src: url(/fonts/Joyride-Round.otf);
+}
+@font-face {
+  font-family: outerSans;
+  src: url(/fonts/MADE-Outer-Sans.otf);
+}
+@font-face {
+  font-family: Rubik-Bold;
+  src: url(/fonts/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: Rubik-Medium;
+  src: url(/fonts/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: Rubik-SemiBold;
+  src: url(/fonts/Rubik-SemiBold.ttf);
+}
+@font-face {
+  font-family: aberMono;
+  src: url(/fonts/Aber-Mono-Bold.otf);
+}
+@font-face {
+  font-family: raleway;
+  src: url(/fonts/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: ralewayRegular;
+  src: url(/fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: jostregular;
+  src: url(/fonts/Jost-Regular.ttf);
+}
+@font-face {
+  font-family: jostmedium;
+  src: url(/fonts/Jost-Medium.ttf);
+}
+@font-face {
+  font-family: jostbold;
+  src: url(/fonts/Jost-Bold.ttf);
+}
+@font-face {
+  font-family: IBMPlexMonoBold;
+  src: url(/fonts/IBMPlexMono-Bold.ttf);
+}@font-face {
+  font-family: IBMPlexMonoSemiBold;
+  src: url(/fonts/IBMPlexMono-SemiBold.ttf);
+}
+@font-face {
+  font-family: IBMPlexMonoRegular;
+  src: url(/fonts/IBMPlexMono-Regular.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+
+.Readex{
+  font-family: 'Readex Pro', sans-serif;
+}
+
+.Rubik-SemiBold {
+  font-family:  Rubik-SemiBold;
+}
+.Rubik-Medium {
+  font-family:  Rubik-Medium;
+}
+.Rubik-Bold {
+  font-family:  Rubik-Bold;
+}
+
+
+.rubikmedium  {
+  font-family:  rubikMedium;
+}
+.rubikbold {
+  font-family:  rubikBold;
+}
+
+.AberMono{
+  font-family:  aberMono;
+}
+.Raleway-Medium{
+  font-family:  raleway;
+}
+.Raleway-Regular{
+  font-family:  ralewayRegular;
+}
+
+*{
+  box-sizing: border-box;
+}
+*{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.body {
+  font-family: 'Playfair Display', serif;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(top, #ff8867, #ff52ff);
+  animation: gradient-animation 4s ease infinite;
+}
+pre{
+  background-color:#101827  ;
+}
+body ::-webkit-scrollbar {
+display: none;
+}
+
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+
+input {
+max-width: 100%;
+}
+button {
+  cursor: pointer;
+}
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+} 
+
+.joyride{
+  font-family: joyride;
+}
+.outerSans{
+  font-family: outerSans;
+}
+
+.hero-title{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.glass{
+  backdrop-filter: saturate(180%) blur(14px);
+  background: #ffffff0d;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.gradientText {
+  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientbutton {
+  color: white;
+  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 42%}
+  50%{background-position:100% 59%}
+  100%{background-position:0% 42%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 42%}
+  50%{background-position:100% 59%}
+  100%{background-position:0% 42%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 42%}
+  50%{background-position:100% 59%}
+  100%{background-position:0% 42%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 42%}
+  50%{background-position:100% 59%}
+  100%{background-position:0% 42%}
+}
+
+
+@-moz-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient-animation {
+  0% , 50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

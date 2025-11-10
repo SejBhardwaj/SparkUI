@@ -1,0 +1,90 @@
+---
+title: Calendar
+description: An animated calendar component with single, range, and multiple date selection modes, time picker, presets, and constraints.
+preview: true
+links:
+ api: /docs/components/calendar#api-reference
+---
+
+## Basic Calendar
+
+<ComponentTabs name="calendar-basic-demo" />
+
+## Date Range Selection
+
+<ComponentTabs name="calendar-range-demo" />
+
+## Multiple Date Selection
+
+<ComponentTabs name="calendar-multiple-demo" />
+
+## Date & Time Selection
+
+<ComponentTabs name="calendar-time-demo" />
+
+## Calendar with Presets
+
+<ComponentTabs name="calendar-presets-demo" />
+
+## Calendar with Constraints
+
+<ComponentTabs name="calendar-constraints-demo" />
+
+## Full Featured Examples
+
+<ComponentTabs name="calendar-full-demo" />
+
+## Installation
+
+### CLI
+
+```package-install
+npx shadcn@latest add "https://jolyui.dev/r/calender"
+
+```
+
+### Manual
+
+<Steps>
+  <Step>
+     Install the following dependencies:
+
+     ```package-install
+     lucide-react motion
+     ```
+  </Step>
+  <Step>
+    Copy and paste the following code into your project.
+
+    <ComponentSource name="calender" />
+  </Step>
+</Steps>
+
+## Usage
+
+```tsx
+import { useState } from "react"
+import { AnimatedCalendar } from "@/components/ui/calender"
+
+export default function MyComponent() {
+  const [date, setDate] = useState<Date>()
+
+  return (
+    <AnimatedCalendar
+      mode="single"
+      value={date}
+      onChange={setDate}
+      placeholder="Select a date"
+    />
+  )
+}
+```
+
+## API Reference
+
+### AnimatedCalendar
+
+<AutoTypeTable
+  path="./types/docs/calendar.ts"
+  name="AnimatedCalendarProps"
+/>

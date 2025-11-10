@@ -1,0 +1,466 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Shadcraft Free",
+  "homepage": "https://free.shadcraft.com",
+  "items": [
+    {
+      "name": "index",
+      "dependencies": [
+        "class-variance-authority",
+        "lucide-react"
+      ],
+      "devDependencies": [
+        "tw-animate-css"
+      ],
+      "css": {
+        "@layer base": {
+          "button": {
+            "cursor": "pointer"
+          }
+        }
+      },
+      "type": "registry:style"
+    },
+    {
+      "name": "avatar-stack",
+      "title": "Avatar Stack",
+      "description": "A component that stacks and overlaps a list of avatars.",
+      "registryDependencies": [
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/avatar-stack.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "page-heading",
+      "title": "Page Heading",
+      "description": "A component that acts as the text-focused version of a hero banner. This component combines a pre-heading label, an H1 heading, supporting description text, and call-to-action buttons.",
+      "registryDependencies": [
+        "@shadcraft/tagline",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/page-heading.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "placeholder-logo",
+      "title": "Placeholder Logo",
+      "description": "A component for that can be replaced with your brand's main logo. This component ensures layouts stay consistent before brand assets are applied.",
+      "registryDependencies": [
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/placeholder-logo.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "profile-card",
+      "title": "Profile Card",
+      "description": "An extension of the avatar component with more details on the individual. Good for blog posts etc.",
+      "registryDependencies": [
+        "avatar",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/profile-card.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "section-heading",
+      "title": "Section Heading",
+      "description": "A component that standardizes heading typography and spacing. This component includes a pre-heading label, main heading, and body text in different layout variants.",
+      "registryDependencies": [
+        "@shadcraft/tagline",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/section-heading.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "star-rating",
+      "title": "Star Rating",
+      "description": "A component that displays ratings with stars and an optional label. This component builds trust with visual feedback.",
+      "registryDependencies": [
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/star-rating.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "tagline",
+      "title": "Tagline",
+      "description": "A component that displays a tagline with different variants.",
+      "registryDependencies": [
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/ui/tagline.tsx",
+          "type": "registry:ui"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:ui"
+    },
+    {
+      "name": "banner-10",
+      "title": "Banner 10",
+      "registryDependencies": [
+        "button",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/banners/10/index.tsx",
+          "type": "registry:component",
+          "target": "components/banner-10.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "banners"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "benefits-13",
+      "title": "Benefits 13",
+      "registryDependencies": [
+        "card",
+        "@shadcraft/section-heading",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/benefits/13/index.tsx",
+          "type": "registry:component",
+          "target": "components/benefits-13.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "benefits"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "contact-11",
+      "title": "Contact 11",
+      "registryDependencies": [
+        "button",
+        "label",
+        "input",
+        "textarea",
+        "checkbox",
+        "@shadcraft/section-heading",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/contact/11/index.tsx",
+          "type": "registry:component",
+          "target": "components/contact-11.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "contact"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "cta-9",
+      "title": "CTA 9",
+      "registryDependencies": [
+        "button",
+        "@shadcraft/section-heading",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/cta/9/index.tsx",
+          "type": "registry:component",
+          "target": "components/cta-9.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "cta"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "faqs-4",
+      "title": "FAQs 4",
+      "registryDependencies": [
+        "accordion",
+        "separator",
+        "@shadcraft/section-heading",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/faqs/4/index.tsx",
+          "type": "registry:component",
+          "target": "components/faqs-4.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "faqs"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "footer-4",
+      "title": "Footer 4",
+      "dependencies": [
+        "react-icons"
+      ],
+      "registryDependencies": [
+        "separator",
+        "@shadcraft/placeholder-logo",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/footers/4/index.tsx",
+          "type": "registry:component",
+          "target": "components/footer-4.tsx"
+        }
+      ],
+      "meta": {
+        "containerClassName": "min-h-svh content-end",
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "footers"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "newsletter-signup-5",
+      "title": "Newsletter Signup 5",
+      "registryDependencies": [
+        "button",
+        "input",
+        "@shadcraft/section-heading",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/newsletter-signup/5/index.tsx",
+          "type": "registry:component",
+          "target": "components/newsletter-signup-5.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "newsletter-signup"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "team-6",
+      "title": "Team 6",
+      "registryDependencies": [
+        "@shadcraft/section-heading",
+        "@shadcraft/profile-card",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/team/6/index.tsx",
+          "type": "registry:component",
+          "target": "components/team-6.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "team"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "testimonials-11",
+      "title": "Testimonials 11",
+      "registryDependencies": [
+        "card",
+        "@shadcraft/section-heading",
+        "@shadcraft/profile-card",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/testimonials/11/index.tsx",
+          "type": "registry:component",
+          "target": "components/testimonials-11.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "testimonials"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "pricing-8",
+      "title": "Pricing 8",
+      "registryDependencies": [
+        "card",
+        "button",
+        "tooltip",
+        "@shadcraft/section-heading",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/pricing/8/index.tsx",
+          "type": "registry:component",
+          "target": "components/pricing-8.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "pricing"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "top-navigation-5",
+      "title": "Top Navigation 5",
+      "registryDependencies": [
+        "button",
+        "@shadcraft/placeholder-logo",
+        "@shadcraft/use-click-outside",
+        "@shadcraft/use-mobile",
+        "https://free.shadcraft.com/r/index.json"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/blocks/top-navigation/5/index.tsx",
+          "type": "registry:component",
+          "target": "components/top-navigation-5.tsx"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "categories": [
+        "top-navigation"
+      ],
+      "type": "registry:block"
+    },
+    {
+      "name": "use-carousel",
+      "dependencies": [
+        "embla-carousel",
+        "embla-carousel-react"
+      ],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/hooks/use-carousel.ts",
+          "type": "registry:hook"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:hook"
+    },
+    {
+      "name": "use-click-outside",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/hooks/use-click-outside.ts",
+          "type": "registry:hook"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:hook"
+    },
+    {
+      "name": "use-mobile",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "src/registry/pro-marketing/hooks/use-mobile.ts",
+          "type": "registry:hook"
+        }
+      ],
+      "meta": {
+        "bundle": "pro-marketing"
+      },
+      "type": "registry:hook"
+    }
+  ]
+}

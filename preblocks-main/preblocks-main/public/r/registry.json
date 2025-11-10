@@ -1,0 +1,89 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "preblocks",
+  "homepage": "https://preblocks.com",
+  "items": [
+    {
+      "name": "cta-1",
+      "type": "registry:block",
+      "title": "Centered Accordion",
+      "categories": ["call-to-action"],
+      "registryDependencies": ["button"],
+      "description": "This centered call to action section uses Shadcn Button components to present a clear call-to-action with primary and secondary options. The centered layout features a prominent headline with supporting text, encouraging user engagement through two distinct button styles.",
+      "files": [
+        {
+          "path": "src/registry/react/call-to-action/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-1",
+      "type": "registry:block",
+      "title": "Centered Accordion",
+      "categories": ["faq-section"],
+      "registryDependencies": ["accordion"],
+      "description": "This FAQ section features a centered layout with an accordion-style interface, making it easy for users to find answers to their questions. The design includes subtle hover effects on all interactive elements while maintaining a clean, organized structure for site navigation.",
+      "files": [
+        {
+          "path": "src/registry/react/faq-section/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "faq-2",
+      "type": "registry:block",
+      "title": "Accordion with Group",
+      "categories": ["faq-section"],
+      "registryDependencies": ["accordion"],
+      "description": "This FAQ section features a centered layout with an accordion-style interface, making it easy for users to find answers to their questions. The design includes subtle hover effects on all interactive elements while maintaining a clean, organized structure for site navigation.",
+      "files": [
+        {
+          "path": "src/registry/react/faq-section/two.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "footer-1",
+      "type": "registry:block",
+      "title": "Minimal Footer",
+      "categories": ["footer"],
+      "description": "This minimalist footer arranges navigation links in a responsive grid alongside brand information and social media icons. The design includes subtle hover effects on all interactive elements while maintaining a clean, organized structure for site navigation.",
+      "files": [
+        {
+          "path": "src/registry/react/footer/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "login-1",
+      "type": "registry:block",
+      "title": "Simple Login Card",
+      "categories": ["login"],
+      "dependencies": ["@tabler/icons-react"],
+      "registryDependencies": ["button", "card", "input", "field"],
+      "description": "A clean, centered login card with email/password authentication and social login options. Features a professional layout with clear hierarchy and premium styling.",
+      "files": [
+        {
+          "path": "src/registry/react/login/one.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "native-accordion",
+      "type": "registry:component",
+      "title": "Native Accordion",
+      "description": "This accordion built using native HTML details and summary elements with Tailwind CSS animation for better SEO and no JavaScript library required..",
+      "files": [
+        {
+          "path": "src/registry/react/native-accordion.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

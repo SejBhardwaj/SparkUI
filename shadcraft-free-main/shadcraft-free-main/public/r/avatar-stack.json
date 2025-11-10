@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar-stack",
+  "title": "Avatar Stack",
+  "description": "A component that stacks and overlaps a list of avatars.",
+  "registryDependencies": [
+    "https://free.shadcraft.com/r/index.json"
+  ],
+  "files": [
+    {
+      "path": "components/ui/avatar-stack.tsx",
+      "content": "import * as React from \"react\";\n\nimport { Avatar, AvatarFallback } from \"@/components/ui/avatar\";\nimport { cn } from \"@/lib/utils\";\n\ninterface AvatarStackProps extends React.ComponentProps<\"div\"> {\n  orientation?: \"horizontal\" | \"vertical\";\n  max?: number;\n  size?: number;\n  overlapRatio?: number;\n  mask?: boolean;\n}\n\nexport function AvatarStack({\n  children,\n  className,\n  orientation = \"horizontal\",\n  max, // Max visible avatars before \"+N\"\n  size = 32, // Avatar size in pixels\n  overlapRatio = 0.2, // 20% of avatar size\n  mask = true,\n  style,\n  ...props\n}: AvatarStackProps) {\n  const avatarItems = React.Children.toArray(children).filter(\n    (child): child is React.ReactElement<React.ComponentProps<typeof Avatar>> =>\n      React.isValidElement(child) && child.type === Avatar\n  );\n\n  const avatarsCount = avatarItems.length;\n  const showOverflow = max && avatarsCount > max;\n  const overflowCount = showOverflow ? avatarsCount - max : 0;\n  const visibleAvatars = showOverflow ? avatarItems.slice(0, max) : avatarItems;\n\n  const avatarClassName = cn(\n    \"object-cover object-center\",\n    mask && \"bg-background ring-2 ring-background\"\n  );\n\n  return (\n    <div\n      data-slot=\"avatar-stack\"\n      data-orientation={orientation}\n      data-size={size}\n      data-overlap-ratio={overlapRatio}\n      data-mask={mask}\n      data-max={max}\n      className={cn(\n        \"group flex items-center\",\n        \"data-[orientation=horizontal]:flex-row data-[orientation=horizontal]:-space-x-(--overlap)\",\n        \"data-[orientation=vertical]:flex-col data-[orientation=vertical]:-space-y-(--overlap)\",\n        className\n      )}\n      style={\n        {\n          ...style,\n          \"--overlap\": `${overlapRatio * size}px`,\n        } as React.CSSProperties\n      }\n      {...props}\n    >\n      {visibleAvatars.map((child, index) =>\n        React.cloneElement(child, {\n          key: index,\n          className: cn(child.props.className, avatarClassName),\n          style: { ...child.props.style, width: size, height: size },\n        })\n      )}\n\n      {showOverflow && (\n        <Avatar className={avatarClassName} style={{ width: size, height: size }}>\n          <AvatarFallback className=\"text-xs font-medium text-muted-foreground\">\n            +{overflowCount}\n          </AvatarFallback>\n        </Avatar>\n      )}\n    </div>\n  );\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "meta": {
+    "bundle": "pro-marketing"
+  },
+  "type": "registry:ui"
+}

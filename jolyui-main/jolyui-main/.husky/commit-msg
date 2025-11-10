@@ -1,0 +1,31 @@
+# Get the commit message
+commit_msg=$(cat "$1")
+
+# Remove comments for validation
+commit_msg_no_comments=$(echo "$commit_msg" | grep -v '^#')
+
+# Check if commit message follows conventional format with emoji
+emoji_pattern="^(✨|🐛|📖|💄|🛠|⚡️|✅|📦|⚙️|🚀|🗑|🤞|🎉)"
+type_pattern="(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert|try|init)"
+
+if ! echo "$commit_msg_no_comments" | grep -qE "$emoji_pattern.*$type_pattern:"; then
+  echo ""
+  echo "❌ Invalid commit message format!"
+  echo ""
+  echo "✅ Correct format: <emoji> <type>: <subject>"
+  echo ""
+  echo "Examples:"
+  echo "  ✨ feat: add new authentication system"
+  echo "  🐛 fix: resolve navigation bug on mobile"
+  echo "  📖 docs: update API documentation"
+  echo "  💄 style: improve button hover effects"
+  echo ""
+  echo "Available types:"
+  echo "  ✨  feat      🐛  fix       📖  docs"
+  echo "  💄  style     🛠  refactor  ⚡️  perf"
+  echo "  ✅  test      📦  build     ⚙️  ci"
+  echo "  🚀  chore     🗑  revert    🤞  try"
+  echo "  🎉  init"
+  echo ""
+  exit 1
+fi
