@@ -29,3 +29,20 @@ export default defineConfig({
     open: true,
   },
 });
+
+// Code splitting configuration
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor': ['react', 'react-dom'],
+          'ui-core': ['./src/components/feedback', './src/components/forms'],
+          'ui-data': ['./src/components/data-display'],
+          'ui-layout': ['./src/components/layout'],
+          'ui-nav': ['./src/components/navigation'],
+        },
+      },
+    },
+  },
+});
