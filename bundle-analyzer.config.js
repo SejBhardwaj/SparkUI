@@ -1,17 +1,12 @@
-/**
- * Bundle analyzer configuration
- * Helps identify large dependencies and optimize bundle size
- */
+import { visualizer } from 'rollup-plugin-visualizer';
 
-module.exports = {
-  analyzerMode: 'static',
-  reportFilename: 'bundle-report.html',
-  openAnalyzer: false,
-  generateStatsFile: true,
-  statsFilename: 'bundle-stats.json',
-  statsOptions: {
-    source: false,
-  },
-  excludeAssets: /\.(map|txt|html)$/,
-  logLevel: 'info',
+export default {
+  plugins: [
+    visualizer({
+      filename: './dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ],
 };
