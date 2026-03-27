@@ -1,4 +1,8 @@
+<div align="center">
+
 # UI Components Project
+
+</div>
 
 > A modern, comprehensive React component library built with TypeScript and Tailwind CSS
 
@@ -8,13 +12,12 @@
 
 ## Overview
 
-A production-ready UI component library featuring 500+ carefully crafted components from 15 leading design systems. Built with modern web standards, accessibility-first principles, and developer experience in mind.
+A production-ready UI component library featuring 500+ carefully crafted components from 15 leading design systems. Built with modern web standards and developer experience in mind.
 
 ## Features
 
 - 🎨 **Comprehensive Component Library** - 500+ components across 10 categories
 - 🔒 **Type-Safe** - Full TypeScript support with strict typing
-- ♿ **Accessible** - WCAG 2.1 AA compliant components
 - 🎭 **Themeable** - Dark mode support with customizable design tokens
 - 📱 **Responsive** - Mobile-first design approach
 - ⚡ **Optimized** - Tree-shakeable with code splitting
@@ -119,8 +122,3 @@ We welcome contributions! Please see our contributing guidelines for details.
 ## License
 
 MIT © 2025
-
----
-
-**Status:** Phase 2 Complete | Phase 3 In Progress  
-**Last Updated:** March 2025
